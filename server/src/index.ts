@@ -1,5 +1,6 @@
 import express from 'express';
 import cors from 'cors';
+import path from 'path';
 import booksRouter from './routes/books';
 import notesRouter from './routes/notes';
 import tagsRouter from './routes/tags';
@@ -13,7 +14,18 @@ const PORT = process.env.PORT || 3001;
 app.use(cors());
 app.use(express.json());
 
-// 路由
+// 在 Electron 环境中提供静态文件服务
+if (process.env.NODE_ENV === 'production') {
+  const clientPath = path.join(__dirname, '../../client/dist');
+  app.use(express.static(clientPath));
+  
+  // 对于非 API 路由，返回 index.html (支持 SPA 路由)
+  app.get('/', (req, res) => {
+    res.sendFile(path.join(clientPath, 'index.html'));
+  });
+}
+
+// API 路由
 app.use('/api/books', booksRouter);
 app.use('/api/notes', notesRouter);
 app.use('/api/tags', tagsRouter);

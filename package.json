@@ -8,9 +8,51 @@
     "client:dev": "cd client && npm run dev",
     "build": "cd client && npm run build && cd ../server && npm run build",
     "start": "cd server && npm start",
-    "setup": "npm install && cd server && npm install && cd ../client && npm install"
+    "setup": "npm install && cd server && npm install && cd ../client && npm install",
+    "electron": "electron .",
+    "electron:dev": "concurrently \"npm run server:dev\" \"wait-on http://localhost:3001 && electron .\"",
+    "dist": "npm run build && electron-builder",
+    "pack": "npm run build && electron-builder --dir"
   },
   "devDependencies": {
-    "concurrently": "^8.2.2"
+    "concurrently": "^8.2.2",
+    "electron": "^27.0.0",
+    "electron-builder": "^24.6.4",
+    "wait-on": "^7.0.1"
+  },
+  "main": "electron/main.js",
+  "homepage": "./",
+  "build": {
+    "appId": "com.knowledge-base.app",
+    "productName": "双维度知识库",
+    "directories": {
+      "output": "dist-electron"
+    },
+    "files": [
+      "electron/**/*",
+      "client/dist/**/*",
+      "server/dist/**/*",
+      "server/node_modules/**/*",
+      "server/package.json"
+    ],
+    "mac": {
+      "category": "public.app-category.productivity",
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    }
   }
 }
