@@ -1,0 +1,68 @@
+[
+  {
+    "id": "book-001",
+    "title": "深度学习",
+    "author": "Ian Goodfellow",
+    "domainTags": ["机器学习", "人工智能"],
+    "themeTags": ["理论基础", "技术实现"],
+    "description": "深度学习的权威指南，涵盖理论基础与实践应用",
+    "coverUrl": "https://example.com/deep-learning.jpg",
+    "createdAt": "2024-01-01T10:00:00.000Z",
+    "updatedAt": "2024-01-01T10:00:00.000Z"
+  },
+  {
+    "id": "book-002", 
+    "title": "统计学习方法",
+    "author": "李航",
+    "domainTags": ["机器学习", "统计学"],
+    "themeTags": ["理论基础", "数学建模"],
+    "description": "统计学习方法的经典教材",
+    "coverUrl": "https://example.com/statistical-learning.jpg",
+    "createdAt": "2024-01-02T10:00:00.000Z",
+    "updatedAt": "2024-01-02T10:00:00.000Z"
+  },
+  {
+    "id": "book-003",
+    "title": "Python编程：从入门到实践",
+    "author": "Eric Matthes",
+    "domainTags": ["编程", "Python"],
+    "themeTags": ["技术实现", "实践应用"],
+    "description": "Python编程的实践指南",
+    "coverUrl": "https://example.com/python-practice.jpg",
+    "createdAt": "2024-01-03T10:00:00.000Z",
+    "updatedAt": "2024-01-03T10:00:00.000Z"
+  },
+  {
+    "id": "book-004",
+    "title": "算法导论",
+    "author": "Thomas H. Cormen",
+    "domainTags": ["算法", "计算机科学"],
+    "themeTags": ["理论基础", "数学建模"],
+    "description": "算法设计与分析的经典教材",
+    "coverUrl": "https://example.com/algorithms.jpg", 
+    "createdAt": "2024-01-04T10:00:00.000Z",
+    "updatedAt": "2024-01-04T10:00:00.000Z"
+  },
+  {
+    "id": "book-005",
+    "title": "自然语言处理综论",
+    "author": "Daniel Jurafsky",
+    "domainTags": ["自然语言处理", "人工智能"],
+    "themeTags": ["理论基础", "技术实现"],
+    "description": "自然语言处理的权威教材",
+    "coverUrl": "https://example.com/nlp.jpg",
+    "createdAt": "2024-01-05T10:00:00.000Z",
+    "updatedAt": "2024-01-05T10:00:00.000Z"
+  },
+  {
+    "id": "book-006",
+    "title": "数据科学入门",
+    "author": "Joel Grus",
+    "domainTags": ["数据科学", "统计学"],
+    "themeTags": ["实践应用", "技术实现"],
+    "description": "数据科学的实用指南",
+    "coverUrl": "https://example.com/data-science.jpg",
+    "createdAt": "2024-01-06T10:00:00.000Z",
+    "updatedAt": "2024-01-06T10:00:00.000Z"
+  }
+]

@@ -1,0 +1,13 @@
+[
+  {
+    "bookId": "book-006",
+    "title": "test",
+    "content": "测试",
+    "type": "concept",
+    "tags": [],
+    "priority": "medium",
+    "id": "2bfe9af2-8301-4595-999d-f3ef69e44c25",
+    "createdAt": "2025-08-11T11:36:26.378Z",
+    "updatedAt": "2025-08-11T11:36:26.378Z"
+  }
+]
